@@ -38,3 +38,56 @@ The designs were created to the following widths:
 - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
 - Weights: 300, 400, 500
 */
+
+body{
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+}
+/*First card -- Jeremy*/
+.info-div{
+    background-color: hsl(235, 46%, 20%);
+    margin: 4rem 1rem 1rem 1rem;
+    border-radius: 12px;
+}
+
+.jeremy-div{
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+}
+
+.jeremy-img{
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.jeremy-report{
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.report{
+    font-size: 16px;
+    color: hsl(235, 45%, 61%);
+    
+}
+
+.par-jeremy{
+    font-size: 22px;
+    color: hsl(236, 100%, 87%);
+    font-weight: 300;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+}
