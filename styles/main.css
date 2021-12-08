@@ -39,19 +39,39 @@ The designs were created to the following widths:
 - Weights: 300, 400, 500
 */
 
+:root {
+    --jeremy-div: hsl(246, 80%, 60%);
+    --hrs-blue: hsl(235, 46%, 20%);
+    --work-div: hsl(15, 100%, 70%);
+    --play-div: hsl(195, 74%, 62%);
+    --study-div: hsl(348, 100%, 68%);
+    --exercise-div: hsl(145, 58%, 55%);
+    --social-div: hsl(264, 64%, 52%);
+    --selfcare-div: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
 body{
-    background-color: hsl(226, 43%, 10%);
+    background-color: var(--very-dark-blue);
     font-family: 'Rubik', sans-serif;
+}
+
+.container-margin{
+    margin: 0 1.5rem 1.5rem 1.5rem;
 }
 /*First card -- Jeremy*/
 .info-div{
-    background-color: hsl(235, 46%, 20%);
-    margin: 4rem 1rem 1rem 1rem;
+    background-color: var(--hrs-blue);
+    margin-top: 4rem;
     border-radius: 12px;
 }
 
 .jeremy-div{
-    background-color: hsl(246, 80%, 60%);
+    background-color: var(--jeremy-div);
     border-radius: 12px;
     padding: 30px;
     display: flex;
@@ -75,7 +95,6 @@ body{
 .report{
     font-size: 16px;
     color: hsl(235, 45%, 61%);
-    
 }
 
 .par-jeremy{
@@ -90,4 +109,50 @@ body{
     padding: 20px;
     color: white;
     font-size: 18px;
+}
+
+/*Second card - work */
+.work-div{
+    height: 60px;
+    border-radius: 12px;
+    background-color: var(--work-div);
+    background-image: url(../images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.work-info{
+    margin-top: -45px;
+    border-radius: 12px;
+    background-color: var(--hrs-blue); 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+/*esto va a ser lo mismo en todos los cards asi que hay que cambiarle el nombre para reutilizarlo*/
+.par-work{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.dots-img{
+    width: 25px;
+    margin-left: 100px;
+}
+
+.par-hrs{
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+}
+
+.lastweek-span{
+    color: var(--Pale-Blue);
+    margin-top: 10px;
 }
