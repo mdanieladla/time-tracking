@@ -174,10 +174,39 @@ body{
     }
 
     .info-div{
-        margin: 20px;
+        width: 250px;
+        height: 417px;
+        margin-right: 20px;
         grid-row-start: 1;
         grid-row-end: 3;
     }
+
+    .jeremy-div{
+        flex-direction: column;
+    }
+
+    .jeremy-report{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .par-jeremy{
+        margin-top: 10px;
+        font-size: 30px;
+        line-height: 35px;
+        color: white;
+        padding-bottom: 15px;
+    }
+
+    .list{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .list-item{
+        margin-bottom: 20px;
+    }
+
     .box1{
         margin: 0 1rem 1rem 0;
         width: 250px;
