@@ -111,8 +111,12 @@ body{
     font-size: 18px;
 }
 
+.box1{
+    margin-top: 20px;
+}
+
 /*Second card - work */
-.work-div{
+.img-div{
     height: 60px;
     border-radius: 12px;
     background-color: var(--work-div);
@@ -127,10 +131,7 @@ body{
     background-color: var(--hrs-blue); 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 40px 30px;
 }
 
 /*esto va a ser lo mismo en todos los cards asi que hay que cambiarle el nombre para reutilizarlo*/
@@ -156,3 +157,59 @@ body{
     color: var(--Pale-Blue);
     margin-top: 10px;
 }
+
+
+/*****************************MEDIA QUERIES*************************/
+ @media all and (min-width: 1024px){
+    
+    body{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 7rem ;
+        box-sizing: content-box;
+    }
+
+    .container-margin{
+        margin: 0;
+    }
+
+    .info-div{
+        margin: 20px;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .box1{
+        margin: 0 1rem 1rem 0;
+        width: 250px;
+    }
+
+    .work-info{
+        margin-top: -20px;
+        height: 100px; 
+        padding: 30px;
+        grid-template-columns: 80% 20%;
+    }
+
+    .par-work{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .dots-img{
+        width: 20px;
+        grid-column-start: 2;
+        margin-left: 20px;
+    }
+
+    .par-hrs{
+        font-size: 40px;
+        color: white;
+        font-weight: 300;
+    }
+
+    .lastweek-span{
+        grid-column-start: 1;
+        font-size: 13px;
+    }
+
+} 
