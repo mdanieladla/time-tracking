@@ -94,12 +94,12 @@ body{
 
 .report{
     font-size: 16px;
-    color: hsl(235, 45%, 61%);
+    color: hsl(236, 100%, 87%);
 }
 
 .par-jeremy{
     font-size: 22px;
-    color: hsl(236, 100%, 87%);
+    color: white;
     font-weight: 300;
 }
 
@@ -194,7 +194,6 @@ body{
         margin-top: 10px;
         font-size: 30px;
         line-height: 35px;
-        color: white;
         padding-bottom: 15px;
     }
 
