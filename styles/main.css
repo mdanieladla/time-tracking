@@ -111,18 +111,55 @@ body{
     font-size: 18px;
 }
 
-.box1{
+.list-item{
+    color: hsl(236, 100%, 87%);;
+}
+
+.active {
+    color: white;
+}
+
+
+.regular-card{
     margin-top: 20px;
 }
 
-/*Second card - work */
-.img-div{
+/*cards*/
+.work, .play, .study, .exercise, .social, .selfcare {
     height: 60px;
     border-radius: 12px;
-    background-color: var(--work-div);
-    background-image: url(../images/icon-work.svg);
     background-repeat: no-repeat;
     background-position: right;
+}
+
+.work {
+    background-color: var(--work-div);
+    background-image: url(../images/icon-work.svg);
+}
+
+.play {
+    background-color: var(--play-div);
+    background-image: url(../images/icon-play.svg);
+}
+
+.study {
+    background-color: var(--study-div);
+    background-image: url(../images/icon-study.svg);
+}
+
+.exercise {
+    background-color: var(--exercise-div);
+    background-image: url(../images/icon-exercise.svg);
+}
+
+.social {
+    background-color: var(--social-div);
+    background-image: url(../images/icon-social.svg);
+}
+
+.selfcare {
+    background-color: var(--play-div);
+    background-image: url(../images/icon-self-care.svg);
 }
 
 .work-info{
@@ -134,7 +171,6 @@ body{
     padding: 40px 30px;
 }
 
-/*esto va a ser lo mismo en todos los cards asi que hay que cambiarle el nombre para reutilizarlo*/
 .par-work{
     color: white;
     font-size: 20px;
@@ -203,10 +239,11 @@ body{
     }
 
     .list-item{
+        cursor: pointer;
         margin-bottom: 20px;
     }
 
-    .box1{
+    .regular-card{
         margin: 0 1rem 1rem 0;
         width: 250px;
     }
