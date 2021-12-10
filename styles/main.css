@@ -200,7 +200,7 @@ body{
     
     body{
         display: grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 25% 75%;
         margin: 7rem ;
         box-sizing: content-box;
     }
@@ -296,3 +296,12 @@ body{
     }
 
 } 
+
+@media all and (min-width: 1024px) and (max-width: 1200px) {
+    body {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin: 7rem ;
+        box-sizing: content-box;
+    }
+}
