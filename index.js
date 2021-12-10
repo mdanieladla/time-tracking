@@ -1,60 +1,49 @@
 'use strict';
 
-let timeframe = 'weekly'; //valor por defecto
-//const container = document.querySelector('.container');
-let cards; //sitio para las cards
-
-// Initialize menu
+let jsonData = [];
+let infoHtml = document.querySelector('.js-info');
 const menu = document.querySelectorAll('.js-li');
+let cardsContent;
 
-menu.forEach((element) => {
-  element.addEventListener('click', changeTimeframe);
+//a cada timeframe le añadimos el evento del click.
+menu.forEach((elemnt) => {
+  elemnt.addEventListener('click', changeTimeframe);
 });
 
-//Get JSON Data y creamos cards
-let data = {};
-
-fetch('./data.json')
-  .then((response) => response.json())
-  .then((jsonData) => {
-    //crear cards
-    jsonData.forEach((elmt) => {
-      createRegularCard(elmt, timeframe);
-    });
-  });
-
-/**************** Functions *********************/
+//eliminamos/añadimos la clse active cuando se haga click en cda timeframe
 function changeTimeframe(ev) {
-  menu.forEach((element) => {
-    //quitamos la clase active si la tiene
-    element.classList.remove('active');
+  menu.forEach((elemnt) => {
+    elemnt.classList.remove('active');
   });
-  //añadimos la clase active al elemt que clickamos
   ev.target.classList.add('active');
-  //   timeframe = ev.target.innerText.toLoweCase();
-  updateCards(timeframe);
 }
 
-// function createRegularCard(elmt, timeframe) {
-//   let title = elmt['title'];
-//   let current = elmt['timeframes'][timeframe]['current'];
-//   let previous = elmt['timeframes'][timeframe]['previous'];
-//   console.log(title, current, previous);
-//   const timeframeMsg = {
-//     daily: 'Yesterday',
-//     weekly: 'Last Week',
-//     monthly: 'Last Month',
-//   };
-//   return `
-//   <div class="box1 ${title.toLowerCase().replace(/\s/g, '')}">
-//     <div class="${title} container-margin"></div>
-//     <div class="work-info container-margin">
-//       <p class="par-work">${title}</p>
-//       <img src="./images/icon-ellipsis.svg" alt="dots" class="dots-img" />
-//       <p class="par-hrs">${current}hrs</p>
-//       <span class="lastweek-span">${
-//         timeframeMsg[timeframe]
-//       } - ${previous}hrs</span>
-//     </div>
-//   </div>`;
-// }
+//funcion para recoger los datos del json
+function getDataJson() {
+  fetch('./data.json')
+    .then((response) => response.json())
+    .then((data) => {
+      jsonData = data;
+      cardsContent = '';
+      jsonData.map((data) => {
+        cardsContent += `
+        <div class="regular-card">
+        <div class="${data.title
+          .toLowerCase()
+          .replace(/\s/g, '')} container-margin"></div>
+        <div class="work-info container-margin">
+          <p class="par-work">${data.title}</p>
+          <img src="./images/icon-ellipsis.svg" alt="dots" class="dots-img" />
+          <p class="par-hrs">${data.timeframes.weekly.current}hrs</p>
+          <span class="lastweek-span">Last Week - ${
+            data.timeframes.weekly.previous
+          }hrs</span>
+        </div>
+      </div>
+        `;
+      });
+      infoHtml.innerHTML = cardsContent;
+    });
+}
+
+getDataJson();
