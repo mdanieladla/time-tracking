@@ -200,8 +200,14 @@ body{
     
     body{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 30% 70%;
         margin: 7rem ;
+        box-sizing: content-box;
+    }
+
+    .js-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         box-sizing: content-box;
     }
 
@@ -212,9 +218,9 @@ body{
     .info-div{
         width: 250px;
         height: 417px;
-        margin-right: 20px;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        /* margin-right: 20px; */
+        /* grid-row-start: 1;
+        grid-row-end: 3; */
     }
 
     .jeremy-div{
@@ -243,6 +249,18 @@ body{
         margin-bottom: 20px;
     }
 
+    /* .work{
+        grid-column-start: 2;
+    }
+    
+    .play{
+        grid-column-start: 3;
+    } 
+    .study{
+        grid-column-start: 4;
+    }  */
+    /* .exercise, .social, .selfcare */
+    
     .regular-card{
         margin: 0 1rem 1rem 0;
         width: 250px;
