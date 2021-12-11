@@ -7,7 +7,7 @@ let cardsContent;
 const daily = document.querySelector('.js-daily');
 const weekly = document.querySelector('.js-weekly');
 const monthly = document.querySelector('.js-monthly');
-let cardsDaily;
+
 //a cada timeframe le añadimos el evento del click.
 menu.forEach((elemnt) => {
   elemnt.addEventListener('click', changeTimeframe);
@@ -21,7 +21,7 @@ function changeTimeframe(ev) {
   ev.target.classList.add('active');
 }
 
-//funcion para mostrar daily-weekly-monthly info
+//funcion para mostrar daily info
 function getDailyReport() {
   cardsContent = '';
   jsonData.map((data) => {
@@ -46,6 +46,7 @@ function getDailyReport() {
 
 daily.addEventListener('click', getDailyReport);
 
+//funcion para mostrar weekly info
 function getWeeklyReport() {
   cardsContent = '';
   jsonData.map((data) => {
@@ -70,6 +71,7 @@ function getWeeklyReport() {
 
 weekly.addEventListener('click', getWeeklyReport);
 
+//funcion para mostrar monthly info
 function getMonthlyReport() {
   cardsContent = '';
   jsonData.map((data) => {
@@ -94,7 +96,7 @@ function getMonthlyReport() {
 
 monthly.addEventListener('click', getMonthlyReport);
 
-//funcion para recoger los datos del json
+//funcion para recoger los datos del json y pintarlos
 function getDataJson() {
   fetch('./data.json')
     .then((response) => response.json())
