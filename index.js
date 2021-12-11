@@ -23,9 +23,9 @@ function changeTimeframe(ev) {
 
 //funcion para mostrar daily-weekly-monthly info
 function getDailyReport() {
+  cardsContent = '';
   jsonData.map((data) => {
-    cardsContent = '';
-    cardsContent = `
+    cardsContent += `
         <div class="regular-card">
         <div class="${data.title
           .toLowerCase()
@@ -47,9 +47,9 @@ function getDailyReport() {
 daily.addEventListener('click', getDailyReport);
 
 function getWeeklyReport() {
+  cardsContent = '';
   jsonData.map((data) => {
-    cardsContent = '';
-    cardsContent = `
+    cardsContent += `
         <div class="regular-card">
         <div class="${data.title
           .toLowerCase()
@@ -71,9 +71,9 @@ function getWeeklyReport() {
 weekly.addEventListener('click', getWeeklyReport);
 
 function getMonthlyReport() {
+  cardsContent = '';
   jsonData.map((data) => {
-    cardsContent = '';
-    cardsContent = `
+    cardsContent += `
         <div class="regular-card">
         <div class="${data.title
           .toLowerCase()
