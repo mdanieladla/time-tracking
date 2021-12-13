@@ -154,21 +154,22 @@ body{
 }
 
 /* FOOTER */
-.footer{
-    bottom: 0;
+a {
+    color: var(--social-div);
+    text-decoration: none;
 }
 
 /*****************************MEDIA QUERIES*************************/
  @media all and (min-width: 1024px){
-    
-    body{
-        display: grid;
-        grid-template-columns: 25% 75%;
-        margin: 7rem ;
-        box-sizing: content-box;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 
     .js-info {
+        margin-left: 20px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         box-sizing: content-box;
@@ -180,7 +181,7 @@ body{
 
     .info-div{
         width: 250px;
-        height: 417px;
+        height: 430px;
     }
 
     .jeremy-div{
@@ -210,7 +211,7 @@ body{
     }
     
     .regular-card{
-        margin: 0 1rem 1rem 0;
+        margin: 1rem 1rem 1rem 0;
         width: 250px;
     }
 
@@ -244,16 +245,9 @@ body{
     }
 
     .footer{
-        grid-column-start: 2;
+        display: flex;
+        justify-content: center;
+        color: white;
     }
 
 } 
-
-@media all and (min-width: 1024px) and (max-width: 1200px) {
-    body {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        margin: 7rem ;
-        box-sizing: content-box;
-    }
-}
